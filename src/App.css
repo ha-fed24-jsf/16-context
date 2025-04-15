@@ -1,0 +1,10 @@
+header {
+	background-color: bisque;
+}
+
+.framed {
+	margin: 0.2em;
+	padding: 0.4em;
+	border: 2px solid hotpink;
+	border-radius: 0.4em;
+}

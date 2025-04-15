@@ -1,25 +1,29 @@
 
-import { useContext } from 'react'
+import { useState } from 'react'
 import './App.css'
-import { UserContext } from './data/userContext'
+import Greeting from './components/Greeting'
+import Header from './components/Header'
+import { UserContext } from './data/userContext.jsx'
+import Framed from './components/Framed.jsx'
 
 function App() {
-	const user = useContext(UserContext)
+	const [user, setUser] = useState({ status: 'utloggad' })
+	const box = { user: user, setUser: setUser }
 
 	return (
+		<UserContext.Provider value={box}>
 		<div className="app">
-			<header>
-				<h1> Smoothies </h1>
-				<div className="user">
-					{user.status === 'utloggad'
-					? 'Logga in!'
-					: `Inloggad som ${user.name}.` }
-				</div>
-			</header>
+			<Framed>
+				<Header />
+			</Framed>
 			<main>
+				<Framed>
+					<Greeting />
+				</Framed>
 
 			</main>
 		</div>
+		</UserContext.Provider>
 	)
 }
 
