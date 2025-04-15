@@ -14,7 +14,7 @@ const Greeting = () => {
 	return (
 		user.status === 'utloggad'
 		? (<button onClick={handleLogin}> Logga in </button>)
-		: (<p> Välkommen {user.name}!</p>)
+		: (<p class="greeting"> Välkommen {user.name}!</p>)
 	)
 }
 

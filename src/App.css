@@ -1,10 +1,56 @@
 header {
 	background-color: bisque;
+	padding: 0 0.3em;
+
+	h1 { margin: 0; }
 }
 
+.greeting {
+	margin: 0;
+}
 .framed {
 	margin: 0.2em;
 	padding: 0.4em;
 	border: 2px solid hotpink;
 	border-radius: 0.4em;
+}
+
+.smoothie-list {
+	padding-top: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8em;
+	/* justify-content: center; */
+	align-items: center;
+
+	.smoothie-item {
+		/* border-bottom: 2px solid hotpink; */
+		box-shadow: 0 0 0.35em 0.2em hotpink;
+		/* margin: 0 1em 0 1em; */
+		padding: 0.2em 1.8em;
+		/* max-width: 12em; */
+		min-width: 12em;
+		
+		h2 { font-size: 1.2em; }
+		h2, p { margin: 0; }
+
+		.button-row {
+			display: flex;
+			flex-direction: row;
+			gap: 0.5em;
+
+			button {
+				padding: 0.2em 0.7em;
+				background-color: rgb(251, 193, 222);
+				border: none;
+				transition: background-color 0.6s;
+
+				&:hover {
+					cursor: pointer;
+					background-color: hotpink;
+					color: rgb(255, 239, 255);
+				}
+			}
+		}
+	}
 }
